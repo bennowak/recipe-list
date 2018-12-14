@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TEMPLATE - /</title>
+</head>
+<body>
+<!--    MAIN CONTENT    -->
+<main role="main" class="container" th:fragment="main">
+<h3>Blog Post Form</h3>
+	<p>Thank you for your submisssion!</p>
+	<h4>Blog Post:</h4>
+	<p th:text="${title}" />
+	<p th:text="${author}" />
+	<p th:text="${blogEntry}" />
+	<a th:href="@{/}"><button class="btn btn-success">Back To Home Page</button></a>
+	<a th:href="@{/blog_posts/new}"><button class= "btn btn-primary">Submit a New Blog Post</button></a>
+</main>
+</body>
+</html>

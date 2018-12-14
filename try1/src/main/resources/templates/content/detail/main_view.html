@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TEMPLATE - /</title>
+</head>
+<body>
+<!--    MAIN CONTENT    -->
+<main role="main" class="container" th:fragment="main">
+<!-- Add in the <body> of your template -->
+    <div th:object="${blogPost}" >
+        <form action="#" method="get">
+            <div class="form-group">
+                <label for="postTitle">Title</label>
+                <input th:value="*{title}" type="text" class="form-control" id="postTitle" disabled>
+            </div>
+            <div class="form-group">
+                <label for="postAuthor">Title</label>
+                <input th:value="*{author}" type="text" class="form-control" id="postAuthor" disabled>
+            </div>
+            <div class="form-group">
+                <label for="postBody">Title</label>
+                <input th:value="*{blogEntry}" type="text" class="form-control" id="postBody" disabled>
+            </div>
+            <button type="button" class="btn btn-primary">Edit</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>

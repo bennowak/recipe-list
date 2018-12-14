@@ -1,0 +1,44 @@
+
+body{
+    background-color: #0B4C5F;
+    --color-primary: rgb(108, 117, 125);
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+.panel {
+    background-color: var(--color-primary)!important;
+    padding: 1em;
+    margin: 1em;
+}
+
+.panel-default {
+
+}
+.panel-heading {
+
+}
+.panel-body {
+
+}
+.panel-footer {
+
+}
+
+.postFormLabel{
+    display: block;
+    width: 500px;
+
+}
+
+.postFormInput{
+    display: block;
+    width: 500px;
+}

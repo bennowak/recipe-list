@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TEMPLATE - /</title>
+</head>
+<body>
+<!--    MAIN CONTENT    -->
+<main role="main" class="container" th:fragment="main">
+    <!-- Add in the <body> of your template -->
+    <a th:href="@{/blog_posts/new}">
+        <button class="btn btn-primary">
+            Submit a New Blog Post
+        </button>
+    </a>
+
+    <div th:each="blogPost:${blogPosts}">
+                <div class="panel panel-default">
+
+                    <div th:object="${blogPost}">
+                        <form action="#" method="get">
+                            <div class="form-group">
+                                <label for="postTitle">Title</label>
+                                <input th:value="*{title}" type="text" class="form-control"
+                                       id="postTitle" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="postAuthor">Title</label>
+                                <input th:value="*{author}" type="text" class="form-control"
+                                       id="postAuthor" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="postBody">Title</label>
+                                <input th:value="*{blogEntry}" type="text" class="form-control"
+                                       id="postBody" disabled>
+                            </div>
+                            <div class="panel-footer">
+                                <a class="btn btn-primary"
+                                   th:href="@{/blog_post/detail/{id}(id=*{id})}">View</a>
+                                <a class="btn btn-primary"
+                                   th:href="@{/blog_post/view/{id}(id=*{id})}">Show</a>
+                                <a class="btn btn-primary"
+                                   th:href="@{/blog_post/delete/{id}(id=*{id})}">Delete</a>
+                            </div>
+                            <!--<button type="button" class="btn btn-primary">Edit</button>-->
+                        </form>
+                    </div>
+                </div>
+            </div>
+</main>
+</body>
+</html>x
