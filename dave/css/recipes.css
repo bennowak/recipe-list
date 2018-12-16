@@ -25,12 +25,18 @@
     overflow: hidden;
 }
 .food > *{
-    transition: all 0.4s;
+    transition-property: transform, font-weight, letter-spacing, background-color, padding;
+    transition-duration: 0.15s;
+}
+.food:hover > *{
+    transition-property: transform, font-weight, letter-spacing, background-color;
+    transition-duration: 0.4s;
 }
 .food:hover > .food__pic{
     transform: scale(1.1) translateY(-1.1rem);
 }
 .food:hover > .food__name{
+    padding: 0 0.5rem; 
     font-weight: 700;
     letter-spacing: 1px;
     background-color: #ddd;
@@ -44,7 +50,7 @@
 
 .food__name{
     height: 10rem;
-    padding: 0 1rem; 
+    padding: 0 2rem; 
     text-align: center;
     font-size: 1.6rem;
     background-color: white;
