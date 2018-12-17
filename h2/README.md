@@ -1,0 +1,1 @@
+Try putting this in your home directory.  It should give you a working h2 db. You may have to replace the original one on your machine.  If you've got data in your local one, back it up with a different name.  I like <orginalname>.<ext>.BACKUP.  Keeps it easy for me to identify 
