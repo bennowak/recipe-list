@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2454fe50-d812-43d4-abde-54dd9803e4af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../try1/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/java/us/bennowak/tts/TechTalentBlog/BlogPost/Author.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/java/us/bennowak/tts/TechTalentBlog/BlogPost/Blog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/java/us/bennowak/tts/TechTalentBlog/BlogPost/BlogPost.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/java/us/bennowak/tts/TechTalentBlog/BlogPost/BlogPostController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/java/us/bennowak/tts/TechTalentBlog/BlogPost/BlogPostRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/java/us/bennowak/tts/TechTalentBlog/BlogPost/TTSBlogApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/java/us/bennowak/tts/TechTalentBlog/BlogPost/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/static/css/standard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/blogpost/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/blogpost/authors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/blogpost/blogs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/blogpost/collections.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/blogpost/detail/view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/blogpost/featured.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/blogpost/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/blogpost/newPost.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/blogpost/result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/content/detail/main_view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/content/main_about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/content/main_authors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/content/main_blogs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/content/main_collections.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/content/main_featured.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/content/main_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/content/main_newPost.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/content/main_result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/fragments/frag_footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/fragments/frag_head.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/main/resources/templates/fragments/frag_header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../try1/src/test/java/us/bennowak/tts/TTSBlogApplicationTests.java" beforeDir="false" />
-    </list>
+    <list default="true" id="2454fe50-d812-43d4-abde-54dd9803e4af" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +84,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545059044792" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545059074408" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -164,12 +123,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545058903063</updated>
-      <workItem from="1545058904436" duration="138000" />
+      <workItem from="1545058904436" duration="318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138000" />
+    <option name="totallyTimeSpent" value="318000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2163" y="15" width="2009" height="1235" extended-state="0" />
@@ -194,7 +153,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32983378" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32983378" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

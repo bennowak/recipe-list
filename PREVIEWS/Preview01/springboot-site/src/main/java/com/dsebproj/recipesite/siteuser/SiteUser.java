@@ -13,13 +13,13 @@ public class SiteUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="id")
+    //@Column(name="id")
     private Long id;
 
     private String username;
     private String hash;
     private String token;
-    @Column(name="token_expiration")
+    //@Column(name="token_expiration")
     private Date token_expiration;
 
     public SiteUser(Long id, String username, String hash, String token, Date token_expiration) {
