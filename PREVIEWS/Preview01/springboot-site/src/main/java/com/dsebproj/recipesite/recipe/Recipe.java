@@ -31,8 +31,6 @@ public class Recipe {
 
     @Override
     public String toString() {
-        return String.format("Recipe ( id=%s, recipeJSON=%s)",
-                this.id,
-                this.recipeJSON);
+        return String.format(this.recipeJSON);
     }
 }
