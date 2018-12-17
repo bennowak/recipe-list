@@ -17,10 +17,13 @@ public class SiteUser {
     private Long id;
 
     private String username;
+    private String email;
     private String hash;
     private String token;
     //@Column(name="token_expiration")
     private Date token_expiration;
+
+
 
     public SiteUser(Long id, String username, String hash, String token, Date token_expiration) {
         this.id = id;
@@ -48,6 +51,14 @@ public class SiteUser {
 
     public void setUsername(String username){
         this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getHash() {

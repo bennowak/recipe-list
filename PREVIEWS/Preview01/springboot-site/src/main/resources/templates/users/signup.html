@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:include="fragments/th_base :: head"></head>
+
+<body>
+<nav th:replace="fragments/th_header :: navbar"></nav>
+<header th:replace="fragments/th_header :: header"></header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="cols12">
+            <form method="post" action="/users/signup">
+                <div class="form-group">
+                    <label for="newuser_nameFirst">First Name</label>
+                    <input type="text" class="form-control" id="newuser_nameFirst" placeholder="">
+                    <label for="newuser_nameLast">Last Name</label>
+                    <input type="email" class="form-control" id="newuser_nameLast" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="newuser_email">Email address</label>
+                    <input type="email" class="form-control" id="newuser_email" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="newuser_pw">Password</label>
+                    <input type="password" class="form-control" id="newuser_pw" placeholder="minimum 8 characters, 1 number, 1 special char">
+                </div>
+                <div class="form-group">
+                    <label for="newuser_confirm">Confirm Password</label>
+                    <input type="password" class="form-control" id="newuser_confirm" placeholder="Same as above">
+                </div>
+                <div class="form-group">
+                    <label for="newuser_agree">I Agree</label>
+                    <input type="checkbox" class="form-control" id="newuser_agree">
+                    <p>You agree that all your base are blong to us!</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/th_base :: site_scripts"></div>
+</body>
+
+</html>
