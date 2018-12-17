@@ -3,6 +3,7 @@ package com.dsebproj.recipesite.siteuser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -30,5 +31,19 @@ public class SiteUserController {
         System.out.println((siteUserRepo.findAll()));
         return mv;
     }
+
+    @GetMapping("/users/signup")
+    public ModelAndView newUserForm() {
+        ModelAndView mv = new ModelAndView("users/signup");
+        mv.addObject("pageTitle", "Member Signup");
+        return mv;
+    }
+
+    @PostMapping("/users/signup")
+    public ModelAndView addNewUser() {
+        ModelAndView mv = new ModelAndView("users/addUser");
+        return mv;
+    }
+
 }
 
