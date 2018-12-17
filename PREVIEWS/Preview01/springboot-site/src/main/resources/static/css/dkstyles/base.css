@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+@media only screen and (max-width: 900px){
+    html{
+        font-size: 50%;
+    }
+}
+  
+body {
+   box-sizing: border-box;
+   min-height: 100vh;
+   background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(https://images.freeimages.com/images/small-previews/875/market-1577866.jpg);
+   background-size: cover;
+   background-position: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    padding: 5rem;
+    margin: 0 auto;
+    max-width: 100rem;
+}

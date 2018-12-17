@@ -1,0 +1,63 @@
+#recipes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 35rem;
+    grid-gap: 3rem;
+}
+
+@media only screen and (max-width: 900px){
+    #recipes{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #recipes{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.food{
+    /* border-radius: 50% 20% / 10% 40%; */
+    border-radius: 1rem;
+    box-shadow: 0 0 10rem rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
+    overflow: hidden;
+}
+.food > *{
+    transition-property: transform, font-weight, letter-spacing, background-color, padding;
+    transition-duration: 0.15s;
+}
+.food:hover > *{
+    transition-property: transform, font-weight, letter-spacing, background-color;
+    transition-duration: 0.4s;
+}
+.food:hover > .food__pic{
+    transform: scale(1.1) translateY(-1.1rem);
+}
+.food:hover > .food__name{
+    padding: 0 0.5rem; 
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color: #ddd;
+}
+
+.food__pic{
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.food__name{
+    height: 10rem;
+    padding: 0 2rem; 
+    text-align: center;
+    font-size: 1.6rem;
+    background-color: white;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+    display: grid;
+    align-content: center;
+    color: black;
+}

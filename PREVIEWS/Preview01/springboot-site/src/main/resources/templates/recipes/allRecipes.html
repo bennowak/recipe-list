@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:include="fragments/th_base :: head"></head>
+
+<body>
+<nav th:replace="fragments/th_header :: navbar"></nav>
+<header th:replace="fragments/th_header :: header"></header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="cols12" th:each="recipe:${allRecipes}">
+            <div th:text="${recipe}">
+            <!--<h2 th:text="*{username}"></h2>-->
+            <!--<ul>-->
+                <!--<li th:text="*{id}"></li>-->
+                <!--<li th:text="*{token}"></li>-->
+            <!--</ul>-->
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/th_base :: site_scripts"></div>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "user": "test",
+  "title": "Keto Bagels",
+  "ingredients": [
+    { "name": "Mozarella Cheese", "notes": "skim, shredded", "amount": 2, "units": "cups"},
+    { "name": "Almond Flour", "notes": "", "amount": 1.25, "units": "cups"},
+    { "name": "Cream Cheese", "notes": "full-fat", "amount": 2, "units": "ounces"},
+    { "name": "baking soda", "notes": "single-action", "amount": 0.75, "units": "tsps"},
+    { "name": "Egg - White", "notes": "Large", "amount": 1, "units": "cups"}
+  ],
+  "steps": [
+    "Mix incredients",
+    "Put on pan",
+    "Bake for 16 minutes"
+  ]
+}
