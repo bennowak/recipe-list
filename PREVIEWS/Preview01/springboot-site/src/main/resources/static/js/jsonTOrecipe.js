@@ -51,6 +51,6 @@ for(let n of jsonElementHidden){
     dname.setAttribute('class', 'food__name');
     dname.innerHTML = data.title;
     atag.appendChild(dpic).appendChild(dname);
-    
+
     recipeDiv.appendChild(atag);
 }
