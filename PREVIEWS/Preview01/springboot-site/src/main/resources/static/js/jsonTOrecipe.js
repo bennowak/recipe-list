@@ -23,7 +23,7 @@ class Recipe {
     }
 
     toString() {
-        let str = `<a href="./recipe/detail/${this.getID()}" class="food">
+        let str = `<a href="/recipes/detail/${this.getID()}" class="food">
                 <div class="food__pic" style="background-image: url(${this.getIMG()})"></div>
                 <div class="food__name">${this.getTitle()}</div>
             </a>`;
@@ -44,7 +44,7 @@ for(let n of jsonElementHidden){
     let dpic = document.createElement('div');
     let dname = document.createElement('div');
 
-    atag.setAttribute('href', `/recipe/detail/${data.id}`);
+    atag.setAttribute('href', `/recipes/detail/${data.id}`);
     atag.setAttribute('class', 'food');
     dpic.setAttribute('class', 'food__pic');
     dpic.setAttribute('style', `background-image: url(${data.img})`);

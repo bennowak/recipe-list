@@ -17,20 +17,25 @@ public class SiteUser {
     private Long id;
 
     private String username;
+    private String firstName;
+    private String lastName;
     private String email;
     private String hash;
-    private String token;
-    //@Column(name="token_expiration")
-    private Date token_expiration;
+    private boolean agree;
+//    private String token;
+//    //@Column(name="token_expiration")
+//    private Date token_expiration;
 
-
-
-    public SiteUser(Long id, String username, String hash, String token, Date token_expiration) {
+    public SiteUser(Long id, String username, String firstName, String lastName, String email, String hash, boolean agree) {
         this.id = id;
         this.username = username;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
         this.hash = hash;
-        this.token = token;
-        this.token_expiration = token_expiration;
+        this.agree = agree;
+//        this.token = token;
+//        this.token_expiration = token_expiration;
     }
 
     public SiteUser(){
@@ -53,6 +58,23 @@ public class SiteUser {
         this.username = username;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+
     public String getEmail() {
         return email;
     }
@@ -69,29 +91,22 @@ public class SiteUser {
         this.hash = hash;
     }
 
-    public String getToken() {
-        return token;
+    public boolean isAgree() {
+        return agree;
     }
 
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public Date getTokenExpiration() {
-        return token_expiration;
-    }
-
-    public void setTokenExpiration(Date expiration) {
-        this.token_expiration = expiration;
+    public void setAgree(boolean agree) {
+        this.agree = agree;
     }
 
     @Override
     public String toString() {
-        return String.format("SiteUser ( id=%s, username=%s, hash=%s, token=%s, expiration=%s)",
+        return String.format("SiteUser ( id=%s, username=%s, firstName=%s, lastName=%s, email=%s, hash=%s)",
                 this.id,
                 this.username,
-                this.hash,
-                this.token,
-                this.token_expiration);
+                this.firstName,
+                this.lastName,
+                this.email,
+                this.hash);
     }
 }

@@ -33,15 +33,18 @@ public class SiteUserController {
     }
 
     @GetMapping("/users/signup")
-    public ModelAndView newUserForm() {
+    public ModelAndView newUserForm(SiteUser newUser) {
         ModelAndView mv = new ModelAndView("users/signup");
         mv.addObject("pageTitle", "Member Signup");
         return mv;
     }
 
     @PostMapping("/users/signup")
-    public ModelAndView addNewUser() {
-        ModelAndView mv = new ModelAndView("users/addUser");
+    public ModelAndView addNewUser(SiteUser siteUser) {
+        ModelAndView mv = new ModelAndView("addUserResult");
+        mv.addObject("pageTitle", "New User Registration");
+        SiteUser newUser = siteUserRepo.save(siteUser);
+        mv.addObject("newUser", newUser);
         return mv;
     }
 

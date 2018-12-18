@@ -12,10 +12,3 @@ On the rare occasion you need to override it, use something like the following:
 With the above snippet, nested elements—including generated content via ::before and ::after—will
 all inherit the specified box-sizing for that .selector-for-some-widget.*/
 
-@import dkstyles/base.css;
-@import dkstyles/create-update.css;
-@import dkstyles/footer.css;
-@import dkstyles/header.css;
-@import dkstyles/login.css;
-@import dkstyles/recipes.css;
-@import dkstyles/results.css;

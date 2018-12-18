@@ -18,6 +18,7 @@ public class Recipe {
     private String imgURL;
 
     public Recipe(String user, String title, String ingredients, String steps, String imgURL) {
+        super();
         this.user = user;
         this.title = title;
         this.ingredients = ingredients;

@@ -6,16 +6,29 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<div class="container-fluid">
-    <div class="row">
-        <div class="cols12" th:object="${recipe}}">
-            <p th:text="${recipe}}"></p>
+<div class="container">
+
+    <div class="row" th:object="${recipe}">
+        <div class="cols-3">
+            <div id="detail-div" class="cols12">
+                <div id="ingredients" th:text="*{ingredients}" hidden></div>
+                <div id="steps" th:text="*{steps}" hidden></div>
+                <h1 th:text="*{title}"></h1>
+                <img th:src="*{imgURL}">
+                <h2>Ingredients</h2>
+                <ul id="showIngredients"></ul>
+                <h2>Steps</h2>
+                <ol id="showSteps"></ol>
+            </div>
+            <div class="cols-3">
+                <a th:href="@{/recipes/delete/{id}(id=*{id})}" class="btn btn-outline-danger" id="delete">Delete</a>
+                <a th:href="@{/recipes/edit/{id}(id=*{id})}" class="btn btn-outline-danger" id="edit">Edit</a>
+            </div>
         </div>
     </div>
 </div>
-</div>
 <div th:replace="fragments/th_base :: site_scripts"></div>
-<script src="/js/jsonTOrecipe.js"></script>
+<script src="/js/recipeDetail.js"></script>
 </body>
 
 </html>
