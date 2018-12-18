@@ -18,4 +18,4 @@ all inherit the specified box-sizing for that .selector-for-some-widget.*/
 @import dkstyles/header.css;
 @import dkstyles/login.css;
 @import dkstyles/recipes.css;
-@import dkstyles/results.css;
+@import dkstyles/results-show.css;
