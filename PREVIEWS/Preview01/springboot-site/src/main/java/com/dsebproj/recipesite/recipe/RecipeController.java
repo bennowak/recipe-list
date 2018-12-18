@@ -20,6 +20,9 @@ public class RecipeController {
 
     private static List<Recipe> recipes = new ArrayList<>();
 
+//  This route gets all the recipes from the database, then creates an ArrayList which is used
+//  to hold the individual Recipes as JSON objects.  Then the ArrayList of JSON strings is passed
+//  to the page for rendering using JavaScript on the page.
     @GetMapping("/recipes")
     public ModelAndView showRecipes() {
         ModelAndView mv = new ModelAndView("recipes/allRecipes");
@@ -34,6 +37,9 @@ public class RecipeController {
         return mv;
     }
 
+//    This route used a Path Variable to query the recipes table for a recipe that matches the id.
+//    If a match is found, it is added to the ModelAndView.  If no match is found a "null" recipe
+//    object is instantiated and passed with an error message in the title field.
     @GetMapping("/recipes/detail/{id}")
     public ModelAndView readRecipe(@PathVariable("id") long id) {
         ModelAndView mv = new ModelAndView("recipes/detail");
@@ -47,6 +53,7 @@ public class RecipeController {
         return mv;
     }
 
+//    This route is to the new recipe form page
     @GetMapping("/recipes/new")
     public ModelAndView newRecipeForm(Recipe newRecipe) {
         ModelAndView mv = new ModelAndView("recipes/newRecipe");
@@ -55,15 +62,19 @@ public class RecipeController {
         return mv;
     }
 
+//    This route handles submission of the new ricipe form
     @PostMapping("/recipes/new")
     public ModelAndView newRecipeSubmit(Recipe recipe){
         ModelAndView mv = new ModelAndView("recipes/newRecipeResult");
         Recipe newRecipe = recipeRepo.save(recipe);
         mv.addObject("newRecipe", newRecipe);
-        System.out.println(newRecipe.toString());
+//        System.out.println(newRecipe.toString());
         return mv;
     }
 
+//    This route used a Path Variable to query the recipes table for a recipe that matches the id.
+//    If a match is found, it is deleted and then a confirmation message added to the ModelAndView.
+//    If no match is found then an error message is added to the ModelAndView and returned.
     @PostMapping("/recipes/delete/{id}")
     public ModelAndView deleteRecipe(@PathVariable("id") long id) {
         ModelAndView mv = new ModelAndView("recipes/deleteRecipe");

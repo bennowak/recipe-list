@@ -16,13 +16,15 @@ public class SiteController {
 //
 //    private static List<Site> sites = new ArrayList<>();
 
+//    This route handles the index page
     @GetMapping("/")
-    public ModelAndView userLogin() {
+    public ModelAndView index() {
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("pageTitle", "Index");
         return mv;
     }
 
+//    This route handles the about page
     @GetMapping("/about")
     public ModelAndView about(){
         ModelAndView mv = new ModelAndView("about");

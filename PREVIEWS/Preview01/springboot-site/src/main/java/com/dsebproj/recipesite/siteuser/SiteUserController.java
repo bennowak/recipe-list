@@ -17,21 +17,25 @@ public class SiteUserController {
 
     private static List<SiteUser> users = new ArrayList<>();
 
-    @GetMapping("/login")
-    public ModelAndView userLogin() {
-        ModelAndView mv = new ModelAndView("users/login");
-        return mv;
-    }
 
+//    @GetMapping("/login")
+//    public ModelAndView userLogin() {
+//        ModelAndView mv = new ModelAndView("users/login");
+//        return mv;
+//    }
+
+//    This route gets all the users from the database, and adds them to the ModelAndView to be
+//    returned.
     @GetMapping("/users")
     public ModelAndView showUsers() {
         ModelAndView mv = new ModelAndView("users/allUsers");
         mv.addObject("pageTitle", "users");
         mv.addObject("siteUsers", siteUserRepo.findAll());
-        System.out.println((siteUserRepo.findAll()));
+//        System.out.println((siteUserRepo.findAll()));
         return mv;
     }
 
+//    This route is the signup form for users
     @GetMapping("/users/signup")
     public ModelAndView newUserForm(SiteUser newUser) {
         ModelAndView mv = new ModelAndView("users/signup");
@@ -39,9 +43,10 @@ public class SiteUserController {
         return mv;
     }
 
+//    This route handles the submission of the new user signup form.
     @PostMapping("/users/signup")
     public ModelAndView addNewUser(SiteUser siteUser) {
-        ModelAndView mv = new ModelAndView("addUserResult");
+        ModelAndView mv = new ModelAndView("users/addUserResult");
         mv.addObject("pageTitle", "New User Registration");
         SiteUser newUser = siteUserRepo.save(siteUser);
         mv.addObject("newUser", newUser);
