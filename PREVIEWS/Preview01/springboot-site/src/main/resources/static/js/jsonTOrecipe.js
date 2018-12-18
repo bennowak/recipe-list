@@ -23,7 +23,7 @@ class Recipe {
     }
 
     toString() {
-        let str = `<a href="./recipe/detail/${this.getID()}" class="food">
+        let str = `<a href="/recipes/detail/${this.getID()}" class="food">
                 <div class="food__pic" style="background-image: url(${this.getIMG()})"></div>
                 <div class="food__name">${this.getTitle()}</div>
             </a>`;
@@ -39,12 +39,18 @@ const jsonElementHidden = document.querySelector("#jsonVals")
 const recipeDiv = document.querySelector("#recipes");
 
 for(let n of jsonElementHidden){
-    console.log(n.innerText);
     let data = JSON.parse(n.innerText);
-    console.log(data);
-    let r = new Recipe(data.id, data.user, data.title, data.ingredients, data.steps, data.img);;
-    let recipe_div = document.createElement("div");
-    recipe_div.innerHTML = r.toString();
-    recipeDiv.appendChild(recipe_div);
-    console.log(r.toString());
+    let atag = document.createElement('a');
+    let dpic = document.createElement('div');
+    let dname = document.createElement('div');
+
+    atag.setAttribute('href', `/recipes/detail/${data.id}`);
+    atag.setAttribute('class', 'food');
+    dpic.setAttribute('class', 'food__pic');
+    dpic.setAttribute('style', `background-image: url(${data.img})`);
+    dname.setAttribute('class', 'food__name');
+    dname.innerHTML = data.title;
+    atag.appendChild(dpic).appendChild(dname);
+
+    recipeDiv.appendChild(atag);
 }

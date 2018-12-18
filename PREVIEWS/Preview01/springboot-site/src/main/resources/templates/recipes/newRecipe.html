@@ -6,38 +6,43 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="cols12">
-            <form>
+            <form action="#" th:action="@{/recipes/new}" method="post" th:object="${newRecipe}">
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <label for="username"><h2>User</h2></label>
+                    <input type="text" class="form-control" id="username" value="test" th:field="*{user}">
+                </div>
+                <h1>New Recipe</h1>
+                <div class="form-group">
+                    <label for="recipe_title"><h2>Title</h2></label>
+                    <input type="text" class="form-control" id="recipe_title"
+                           placeholder="Margarita Pizza" th:field="*{title}">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
+                    <label for="recipe_imgURL"><h2>Picture</h2></label>
+                    <input type="text" class="form-control" id="recipe_imgURL"
+                           placeholder="http/https URL to image" th:field="*{imgURL}">
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleFormControlSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
+                <!--<div class="form-group">-->
+                <!--<label for="exampleFormControlTextarea1">Example textarea</label>-->
+                <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
+                <!--</div>-->
+                <h2>Ingredient</h2>
+                <div class="input-group">
+                    <label for="ingredient">Name:</label>
+                    <input type="text" class="form-control" id="ingredient"
+                           placeholder="ingredients JSON string" th:field="*{ingredients}">
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <h2>Steps</h2>
+                <div class="input-group">
+
+                    <label for="steps">Step 1.)</label>
+                    <input type="text" class="form-control" id="steps" placeholder="step JSON string" th:field="*{steps}">
                 </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Clear</button>
             </form>
         </div>
     </div>

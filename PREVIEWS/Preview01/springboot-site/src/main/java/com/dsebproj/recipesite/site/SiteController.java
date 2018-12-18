@@ -22,4 +22,11 @@ public class SiteController {
         mv.addObject("pageTitle", "Index");
         return mv;
     }
+
+    @GetMapping("/about")
+    public ModelAndView about(){
+        ModelAndView mv = new ModelAndView("about");
+        mv.addObject("pageTitle", "About");
+        return mv;
+    }
 }
