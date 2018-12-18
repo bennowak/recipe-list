@@ -33,7 +33,7 @@ public class RecipeController {
             recipeList.add(r.toJSON());
         }
         mv.addObject("allRecipes", recipeList);
-        System.out.println(recipeList);
+//        System.out.println(recipeList);
         return mv;
     }
 
@@ -66,6 +66,7 @@ public class RecipeController {
     @PostMapping("/recipes/new")
     public ModelAndView newRecipeSubmit(Recipe recipe){
         ModelAndView mv = new ModelAndView("recipes/newRecipeResult");
+        mv.addObject("pageTitle", "Recipe Submitted");
         Recipe newRecipe = recipeRepo.save(recipe);
         mv.addObject("newRecipe", newRecipe);
 //        System.out.println(newRecipe.toString());

@@ -36,5 +36,4 @@ module.exports = class Recipe{
         hstr.appendChild("div");
 
     }
-    
 }

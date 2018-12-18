@@ -7,8 +7,8 @@ const steps = JSON.parse(document.querySelector('#steps').innerHTML);
 const showIngredients = document.querySelector('#showIngredients');
 const showSteps = document.querySelector('#showSteps');
 
-console.log(ingredients);
-console.log(steps);
+// console.log(ingredients);
+// console.log(steps);
 
 if(document.propertyIsEnumerable(ingredients)){
     console.log("ingredients is innumerable");
@@ -24,7 +24,7 @@ if(ingredients.length > 1){
     }
 } else {
     let e = document.createElement('li');
-    e.innerText = `${ingredients.name} ${ingredients.notes} ${ingredients.amount} ${ingredients.units} `;
+    e.innerText = `${ingredients.name} ${ingredients.notes} ${ingredients.amount} ${ingredients.units}`;
     showIngredients.appendChild(e);
 }
 
@@ -39,4 +39,3 @@ if(steps.length > 1){
     e.innerText = `${steps}`;
     showSteps.appendChild(e);
 }
-
