@@ -11,7 +11,9 @@
                 <div id="ingredients" th:text="*{ingredients}" hidden></div>
                 <div id="steps" th:text="*{steps}" hidden></div>
                 <h1 th:text="*{title}"></h1>
-                <img th:src="*{imgURL}">
+                <div class="my-recipe-img">
+                	<img th:src="*{imgURL}">
+                </div>
                 <div class="title-and-list">
 	                <h2>Ingredients</h2>
 	                <ul id="showIngredients"></ul>
