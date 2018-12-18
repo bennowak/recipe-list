@@ -1,7 +1,7 @@
 .my-recipe{
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 1fr;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 10rem 1fr;
 }
 
 .my-recipe-title{
