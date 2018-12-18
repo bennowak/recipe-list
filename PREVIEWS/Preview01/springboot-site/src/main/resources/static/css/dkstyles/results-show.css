@@ -1,6 +1,23 @@
 .my-recipe{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 1fr;
 }
 
+.my-recipe-title{
+	font-size: 3rem;
+	height: 3rem;
+	transform: scaleY(1.5);
+	font-family: Copperplate, fantasy;
+	grid-column: 1 / 3;
+	justify-self: center;
+}
+
+.my-recipe-img{
+	grid-column: 3 / -1;
+	grid-row: 1 / 3;
+}
+
+.my-recipe-img img{
+	width: 100%;
+}
