@@ -1,6 +1,7 @@
 .navbar,
 .navbar form input,
-.navbar form button
+.navbar form button,
+.dropdown-menu
 {
 	font-size: 1.6rem;
 }
