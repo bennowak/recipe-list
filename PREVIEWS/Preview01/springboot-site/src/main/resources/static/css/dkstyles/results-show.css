@@ -35,9 +35,15 @@
 
 @media only screen and (max-width: 900px){
 	.my-recipe-img{
-		grid-column: 1 / -1;
+		grid-column: 2 / -2;
 		grid-row: 2 / 3;
 		justify-self: center;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.my-recipe-img{
+		grid-column: 1 / -1;
 	}
 }
 
