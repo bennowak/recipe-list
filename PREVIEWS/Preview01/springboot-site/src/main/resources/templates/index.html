@@ -6,13 +6,16 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<div class="container">
-    <div class="row">
-        <div class="cols12">
-            <h1>Demo of the Spoon</h1>
-        </div>
-    </div>
-</div>
+<section id="recipes">
+	<div th:each="recipe:${allRecipes}">
+		<a th:href="/recipes/detail/{id}(id=${recipe.id})" class="food">
+			<div class="food__pic">
+				<img th:src="${recipe.imgURL}">
+			</div>
+			<div class="food__name" th:text="${recipe.title}"></div>
+		</a>
+	</div>
+</section>
 <div th:replace="fragments/th_base :: site_scripts"></div>
 </body>
 
