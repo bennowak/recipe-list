@@ -6,23 +6,24 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<div class="container">
-    <div class="row">
-        <div class="cols-3">
-            <div id="detail-div" class="cols12" th:object="${recipe}">
+<section>
+            <div class="my-recipe" th:object="${recipe}">
                 <div id="ingredients" th:text="*{ingredients}" hidden></div>
                 <div id="steps" th:text="*{steps}" hidden></div>
-                <h1 th:text="*{title}"></h1>
-                <img th:src="*{imgURL}">
-                <h2>Ingredients</h2>
-                <ul id="showIngredients"></ul>
-                <h2>Steps</h2>
-                <ol id="showSteps"></ol>
+                <h2 class="my-recipe-title" th:text="*{title}"></h2>
+                <div class="my-recipe-img">
+                	<img th:src="*{imgURL}">
+                </div>
+                <div class="title-and-list tl1">
+	                <h2>Ingredients</h2>
+	                <ul class="my-recipe-list" id="showIngredients"></ul>
+                </div>
+                <div class="title-and-list tl2">
+	                <h2>Steps</h2>
+	                <ol class="my-recipe-list" id="showSteps"></ol>
+                </div>
             </div>
-            <div class="cols-3"></div>
-        </div>
-    </div>
-</div>
+</section>
 <div th:replace="fragments/th_base :: site_scripts"></div>
 <script src="/js/recipeDetail.js"></script>
 </body>
