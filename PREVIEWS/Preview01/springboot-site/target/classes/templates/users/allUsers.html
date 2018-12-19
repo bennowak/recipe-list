@@ -6,19 +6,18 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<div class="container">
-    <div class="row">
-        <div class="cols12" th:each="siteUser:${siteUsers}">
-            <div th:text="${siteUser}">
-            <!--<h2 th:text="*{username}"></h2>-->
-            <!--<ul>-->
-                <!--<li th:text="*{id}"></li>-->
-                <!--<li th:text="*{token}"></li>-->
-            <!--</ul>-->
-            </div>
+<section id="siteUser" th:object="${siteUsers}">
+
+    <a th:each="user:${siteUsers}" th:href="@{/users/detail/{id}(id=${user.id})}" class="food">
+        <!--<a th:href="/recipes/detail/{id}(id=${recipe.id})" class="food">-->
+        <div class="food__pic">
+            <img src="https://cdn2.iconfinder.com/data/icons/medicine-3-1/512/patient_card-512.png">
         </div>
-    </div>
-</div>
+        <div class="food__name" th:text="${user.username}"></div>
+    </a>
+</section>
+
+<footer th:replace="fragments/th_base :: footer"></footer>
 <div th:replace="fragments/th_base :: site_scripts"></div>
 </body>
 

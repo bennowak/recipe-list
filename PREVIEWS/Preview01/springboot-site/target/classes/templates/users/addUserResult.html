@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row">
         <div class="cols12" th:object="${siteUser}">
-            <h1>New User Registration - Success</h1>
+            <h1 class="success_heading">New User Registration - Success</h1>
             <h2>Your Info</h2>
             <ul>
                 <li>Username: <span th:text="*{username}"></span></li>
@@ -19,6 +19,7 @@
         </div>
     </div>
 </div>
+<footer th:replace="fragments/th_base :: footer"></footer>
 <div th:replace="fragments/th_base :: site_scripts"></div>
 </body>
 

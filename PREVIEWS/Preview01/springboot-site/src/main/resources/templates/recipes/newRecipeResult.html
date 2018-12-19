@@ -6,7 +6,9 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
+<h1 class=".success_heading">Recipe Submitted</h1>
 <section>
+
             <div class="my-recipe" th:object="${recipe}">
                 <div id="ingredients" th:text="*{ingredients}" hidden></div>
                 <div id="steps" th:text="*{steps}" hidden></div>
@@ -24,6 +26,7 @@
                 </div>
             </div>
 </section>
+<footer th:replace="fragments/th_base :: footer"></footer>
 <div th:replace="fragments/th_base :: site_scripts"></div>
 <script src="/js/recipeDetail.js"></script>
 </body>
