@@ -6,15 +6,8 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<section id="recipes" th:object="${allRecipes}">
-	
-        <a th:each="recipe:${allRecipes}" th:href="@{/recipes/detail/{id}(id=${recipe.id})}" class="food">
-		<!--<a th:href="/recipes/detail/{id}(id=${recipe.id})" class="food">-->
-			<div class="food__pic">
-				<img th:src="${recipe.imgURL}">
-			</div>
-			<div class="food__name" th:text="${recipe.title}"></div>
-		</a>
+<section>
+
 </section>
 <div th:replace="fragments/th_base :: site_scripts"></div>
 </body>
