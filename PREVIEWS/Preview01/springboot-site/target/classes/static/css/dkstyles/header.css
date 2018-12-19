@@ -40,12 +40,6 @@ header{
     align-items: center;
 }
 
-@media only screen and (max-width: 900px){
-    .spoon{
-        grid-template-columns: calc(50% - 15rem) 30rem 1fr 15rem;
-    }
-}
-
 @media only screen and (max-width: 600px){
     .spoon{
         align-self: start;
