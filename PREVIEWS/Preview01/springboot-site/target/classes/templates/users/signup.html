@@ -6,38 +6,33 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<div class="container">
-    <div class="row">
-        <div class="cols12">
-            <form action="#" th:action="@{/users/signup}" method="post" th:object="${siteUser}">
-                <div class="form-group">
+<section>
+			<form class="login" action="#" th:action="@{/users/signup}" method="post" th:object="${siteUser}">
                     <label for="newuser_username">Username</label>
                     <input type="text" class="form-control" id="newuser_username" placeholder="Unique Username" th:field="*{username}">
                     <label for="newuser_nameFirst">First Name</label>
                     <input type="text" class="form-control" id="newuser_nameFirst" placeholder="First Name" th:field="*{firstName}">
                     <label for="newuser_nameLast">Last Name</label>
                     <input type="text" class="form-control" id="newuser_nameLast" placeholder="Last Name" th:field="*{lastName}">
-                </div>
-                <div class="form-group">
                     <label for="newuser_email">Email address</label>
                     <input type="email" class="form-control" id="newuser_email" placeholder="name@example.com" th:field="*{email}">
-                </div>
-                <div class="form-group">
                     <label for="newuser_pw">Password</label>
                     <input type="password" class="form-control" id="newuser_pw" placeholder="secret" th:field="*{hash}">
-                </div>
-                <div class="form-group">
                     <label for="newuser_confirm">Confirm Password</label>
                     <input type="password" class="form-control" id="newuser_confirm" placeholder="Same as above">
-                </div>
-                <div class="form-group">
+                    <p style="visibility: hidden">text</p>
                     <label for="newuser_agree">I Agree</label>
                     <input type="checkbox" class="form-control" id="newuser_agree" th:field="*{agree}">
+                    <p style="visibility: hidden">text</p>
                     <p>You agree that all your base are blong to us!</p>
-                </div>
                 <button type="submit" class="btn btn-primary">Register</button>
                 <button type="reset" class="btn btn-primary">Clear</button>
-            </form>
+            </form>	
+</section>
+<div class="container">
+    <div class="row">
+        <div class="cols12">
+            
         </div>
     </div>
 </div>

@@ -1,0 +1,46 @@
+.login{
+	padding: 3rem;
+	display: grid;
+	grid-template-columns: 15rem 15rem 1fr;
+	grid-template-rows: 5rem;
+	grid-gap: 1rem;
+	background-color: rgba(235, 235, 235, 0.5);
+	border-radius: 1rem;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+	align-items: center;
+}
+
+.login, .login input, .login button{
+	font-size: 1.6rem;
+} 
+
+.login input{
+	grid-column: 2 / -1;
+	padding: 2.5rem 1rem;
+	background-color: rgba(235, 235, 235, 0.5);
+	outline: none;
+	border: none;
+	border-bottom: 3px solid #999;
+	transition: all 0.3s;
+}
+.login input:focus{
+	background-color: rgba(235, 235, 235, 0.5);;
+    border-color: rgba(235, 235, 235, 0.5);
+	border-bottom: 3px solid green;
+}
+.login input:focus:invalid{
+	border-bottom: 3px solid red;
+}
+
+input#newuser_agree{
+	justify-self: start;
+	width: 3rem;
+}
+
+.login p{
+	grid-column: 1 / -1;
+}
+
+.login button{
+	width: 100%;
+}

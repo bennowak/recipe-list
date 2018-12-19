@@ -6,47 +6,38 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<div class="container">
-    <div class="row">
-        <div class="cols12">
-            <form action="#" th:action="@{/recipes/new}" method="post" th:object="${newRecipe}">
-                <div class="form-group">
-                    <label for="username"><h2>User</h2></label>
+<section>
+	<form class="create-recipe" action="#" th:action="@{/recipes/new}" method="post" th:object="${newRecipe}">
+                    <label for="username">User</label>
                     <input type="text" class="form-control" id="username" value="test" th:field="*{user}">
-                </div>
-                <h1>New Recipe</h1>
-                <div class="form-group">
-                    <label for="recipe_title"><h2>Title</h2></label>
+                    <p style="visibility: hidden">text</p>
+                <h2 class="cr-main-header">New Recipe</h2>
+                <p style="visibility: hidden">text</p>
+                    <label for="recipe_title">Title</label>
                     <input type="text" class="form-control" id="recipe_title"
                            placeholder="Margarita Pizza" th:field="*{title}">
-                </div>
-                <div class="form-group">
-                    <label for="recipe_imgURL"><h2>Picture</h2></label>
+                    <label for="recipe_imgURL">Picture</label>
                     <input type="text" class="form-control" id="recipe_imgURL"
                            placeholder="http/https URL to image" th:field="*{imgURL}">
-                </div>
                 <!--<div class="form-group">-->
                 <!--<label for="exampleFormControlTextarea1">Example textarea</label>-->
                 <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
                 <!--</div>-->
-                <h2>Ingredient</h2>
-                <div class="input-group">
+                <p style="visibility: hidden">text</p>
+                <h2 class="cr-secondary-header">Ingredient</h2>
                     <label for="ingredient">Name:</label>
                     <input type="text" class="form-control" id="ingredient"
                            placeholder="ingredients JSON string" th:field="*{ingredients}">
-                </div>
-                <h2>Steps</h2>
-                <div class="input-group">
-
+                <p style="visibility: hidden">text</p>
+                <h2 class="cr-secondary-header">Steps</h2>
                     <label for="steps">Step 1.)</label>
                     <input type="text" class="form-control" id="steps" placeholder="step JSON string" th:field="*{steps}">
-                </div>
+                    <p style="visibility: hidden">text</p>
+                    <p style="visibility: hidden">text</p>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <button type="reset" class="btn btn-secondary">Clear</button>
             </form>
-        </div>
-    </div>
-</div>
+</section>
 <div th:replace="fragments/th_base :: site_scripts"></div>
 </body>
 
