@@ -37,7 +37,7 @@
 	justify-self: center;
 }
 
-.create-recipe, .create-recipe input, .create-recipe button{
+.create-recipe input, .create-recipe button{
 	font-size: 1.6rem;
 } 
 

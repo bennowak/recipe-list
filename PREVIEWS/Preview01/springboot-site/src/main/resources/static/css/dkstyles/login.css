@@ -10,7 +10,7 @@
 	align-items: center;
 }
 
-.login, .login input, .login button{
+.login input, .login button{
 	font-size: 1.6rem;
 } 
 

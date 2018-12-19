@@ -23,6 +23,7 @@ body {
    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(https://images.freeimages.com/images/small-previews/875/market-1577866.jpg);
    background-size: cover;
    background-position: center;
+   font-size: 1.6rem;
 }
 
 a, a:hover, a:active{
