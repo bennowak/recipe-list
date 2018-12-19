@@ -6,17 +6,16 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<!--<div class="container">-->
-    <!--<div class="row">-->
-        <!--<div class="cols12">-->
-            <ul id="jsonVals" hidden>
-                <li th:text="${recipe}" th:each="recipe:${allRecipes}"></li>
-            </ul>
-            <section id="recipes">
-            </section>
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+<section id="recipes" th:object="${allRecipes}">
+	
+        <a th:each="recipe:${allRecipes}" th:href="@{/recipes/detail/{id}(id=${recipe.id})}" class="food">
+		<!--<a th:href="/recipes/detail/{id}(id=${recipe.id})" class="food">-->
+			<div class="food__pic">
+				<img th:src="${recipe.imgURL}">
+			</div>
+			<div class="food__name" th:text="${recipe.title}"></div>
+		</a>
+</section>
 <div th:replace="fragments/th_base :: site_scripts"></div>
 <script src="/js/jsonTOrecipe.js"></script>
 </body>

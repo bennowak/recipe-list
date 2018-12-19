@@ -25,14 +25,19 @@ public class RecipeController {
 //  to the page for rendering using JavaScript on the page.
     @GetMapping("/recipes")
     public ModelAndView showRecipes() {
-        ModelAndView mv = new ModelAndView("recipes/allRecipes");
+//        ModelAndView mv = new ModelAndView("recipes/allRecipes");
+//        mv.addObject("pageTitle", "Recipes");
+//        Iterable<Recipe> allRecipes = recipeRepo.findAll();
+//        ArrayList<String> recipeList = new ArrayList<>();
+//        for(Recipe r : allRecipes){
+//            recipeList.add(r.toJSON());
+//        }
+//        mv.addObject("allRecipes", recipeList);
+////        System.out.println(recipeList);
+//        return mv;
+    	ModelAndView mv = new ModelAndView("recipes/allRecipes");
         mv.addObject("pageTitle", "Recipes");
-        Iterable<Recipe> allRecipes = recipeRepo.findAll();
-        ArrayList<String> recipeList = new ArrayList<>();
-        for(Recipe r : allRecipes){
-            recipeList.add(r.toJSON());
-        }
-        mv.addObject("allRecipes", recipeList);
+        mv.addObject("allRecipes", recipeRepo.findAll());
 //        System.out.println(recipeList);
         return mv;
     }
