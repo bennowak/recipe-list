@@ -18,21 +18,20 @@
 }
 
 .food{
-    /* border-radius: 50% 20% / 10% 40%; */
     border-radius: 1rem;
     box-shadow: 0 0 10rem rgba(0, 0, 0, 0.4);
     white-space: nowrap;
     overflow: hidden;
 }
-.food > *{
+.food > .food__pic img, .food > .food__name{
     transition-property: transform, font-weight, letter-spacing, background-color, padding;
-    transition-duration: 0.15s;
+    transition-duration: 0.2s;
 }
-.food:hover > *{
-    transition-property: transform, font-weight, letter-spacing, background-color;
-    transition-duration: 0.4s;
+.food:hover > .food__pic img, .food:hover > .food__name{
+    transition-property: transform, font-weight, letter-spacing, background-color, padding;
+    transition-duration: 0.5s;
 }
-.food:hover > .food__pic{
+.food:hover > .food__pic img{
     transform: scale(1.1) translateY(-1.1rem);
 }
 .food:hover > .food__name{
@@ -43,9 +42,13 @@
 }
 
 .food__pic{
+	display: grid;	
+	justify-content: center;
+}
+
+.food__pic img{
     height: 25rem;
-    background-size: cover;
-    background-position: center;
+    display: block;
 }
 
 .food__name{

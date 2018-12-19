@@ -69,3 +69,35 @@
 .my-recipe-list li{
 	padding: 0.5rem;
 }
+
+#delete-recipe, #edit-recipe{
+	width: 100%;
+	text-align: center;
+}
+
+#delete-recipe{
+	grid-column: 3 / 4;
+}
+
+@media only screen and (max-width: 900px){
+	#delete-recipe{
+		grid-column: 2 / 3;
+	}
+}
+
+#edit-recipe{ 
+	grid-column: 4 / -1;
+}
+
+@media only screen and (max-width: 900px){
+	#edit-recipe{
+		grid-column: 3 / 4;
+	}
+}
+
+#delete-recipe button, #edit-recipe button{
+	font-size: 1.6rem;
+	padding: 1rem;
+	width: 100%;
+	max-width: 150rem;
+}

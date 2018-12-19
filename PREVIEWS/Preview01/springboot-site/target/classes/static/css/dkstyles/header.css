@@ -1,5 +1,12 @@
-.navbar{
+.navbar,
+.navbar form input,
+.navbar form button
+{
 	font-size: 1.6rem;
+}
+
+.navbar form input{
+	padding: 1.6rem;	
 }
 
 header{

@@ -6,31 +6,30 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<div class="container">
-
-    <div class="row" th:object="${recipe}">
-        <div class="cols-3">
-            <div id="detail-div" class="cols12">
+<section>
+            <div class="my-recipe" th:object="${recipe}">
                 <div id="ingredients" th:text="*{ingredients}" hidden></div>
                 <div id="steps" th:text="*{steps}" hidden></div>
-                <h1 th:text="*{title}"></h1>
-                <img th:src="*{imgURL}">
-                <h2>Ingredients</h2>
-                <ul id="showIngredients"></ul>
-                <h2>Steps</h2>
-                <ol id="showSteps"></ol>
-            </div>
-            <div class="cols-3">
-                <form class="recipe-detail-form" action="#" th:action="@{/recipes/delete/{id}(id=*{id})}" method="post">
+                <h2 class="my-recipe-title" th:text="*{title}"></h2>
+                <div class="my-recipe-img">
+                	<img th:src="*{imgURL}">
+                </div>
+                <div class="title-and-list tl1">
+	                <h2>Ingredients</h2>
+	                <ul class="my-recipe-list" id="showIngredients"></ul>
+                </div>
+                <div class="title-and-list tl2">
+	                <h2>Steps</h2>
+	                <ol class="my-recipe-list" id="showSteps"></ol>
+                </div>
+                <form class="recipe-detail-form" id="delete-recipe" action="#" th:action="@{/recipes/delete/{id}(id=*{id})}" method="post">
                     <button type="submit" class="btn btn-outline-danger" id="delete">Delete</button>
                 </form>
-                <form class="recipe-detail-form" action="#" th:action="@{/recipes/edit/{id}(id=*{id})}" method="post">
+                <form class="recipe-detail-form" id="edit-recipe" action="#" th:action="@{/recipes/edit/{id}(id=*{id})}" method="post">
                     <button type="submit" class="btn btn-outline-danger" id="edit">Edit</button>
                 </form>
             </div>
-        </div>
-    </div>
-</div>
+</section>
 <div th:replace="fragments/th_base :: site_scripts"></div>
 <script src="/js/recipeDetail.js"></script>
 </body>

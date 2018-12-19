@@ -1,0 +1,8 @@
+#message-deleted{
+	padding-top: 5rem;
+	font-size: 2rem;
+}
+
+#message-deleted > *{
+	text-align: center;
+}

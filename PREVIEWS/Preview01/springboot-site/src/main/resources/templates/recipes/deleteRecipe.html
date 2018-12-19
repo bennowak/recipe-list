@@ -6,12 +6,12 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<div class="container">
+<section id="message-deleted">
 
-    <div class="row" th:text="${deleteMessage}">
-
-    </div>
-</div>
+    <div th:text="${deleteMessage}"></div>
+    <div><a href="/">Return to home page</a></div>
+    
+</section>
 <div th:replace="fragments/th_base :: site_scripts"></div>
 <script src="/js/recipeDetail.js"></script>
 </body>
