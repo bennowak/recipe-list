@@ -8,8 +8,14 @@
 <header th:replace="fragments/th_header :: header"></header>
 <div class="container">
     <div class="row">
-        <div class="cols12">
-
+        <div class="cols12" th:object="${siteUser}">
+            <h1>New User Registration - Success</h1>
+            <h2>Your Info</h2>
+            <ul>
+                <li>Username: <span th:text="*{username}"></span></li>
+                <li>Name: <span th:text="*{firstName}"></span> <span th:text="*{lastName}"></span></li>
+                <li>email: <span th:text="*{email}"></span></li>
+            </ul>
         </div>
     </div>
 </div>
