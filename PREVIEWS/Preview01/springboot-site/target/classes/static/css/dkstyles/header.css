@@ -2,6 +2,10 @@
 	font-size: 1.6rem;
 }
 
+.dropdown-menu{
+	font-size: 1.6rem;
+}
+
 header{
     display: grid;
     background-image: linear-gradient( rgba(255, 255, 255, 0.7),  rgba(235, 235, 235, 0.7)) ;
@@ -38,12 +42,6 @@ header{
     display: grid;
     grid-template-columns: calc(50% - 17.5rem) 35rem 1fr 18rem;
     align-items: center;
-}
-
-@media only screen and (max-width: 900px){
-    .spoon{
-        grid-template-columns: calc(50% - 15rem) 30rem 1fr 15rem;
-    }
 }
 
 @media only screen and (max-width: 600px){

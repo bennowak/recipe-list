@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: davidkeith
+Build-Jdk: 11.0.1
+Implementation-Title: recipesite
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.dsebproj
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/recipesite
+Created-By: Maven Integration for Eclipse
+
