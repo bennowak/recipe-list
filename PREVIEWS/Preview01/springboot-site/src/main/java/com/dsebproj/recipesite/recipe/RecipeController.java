@@ -97,12 +97,13 @@ public class RecipeController {
         return mv;
     }
     
-    @GetMapping("/recipe/edit/{id}")
+    @PostMapping("/recipes/edit/{id}")
 	public ModelAndView updatePostForm(@PathVariable("id") long id) {
 		ModelAndView mv = new ModelAndView("recipes/editpage");
 		Optional<Recipe> recipe = recipeRepo.findById(id);
 		mv.addObject("newRecipe", recipe);
 		mv.addObject("pageTitle", "Recipe - Edit");
+		System.out.println(recipe);
 		return mv;
 	}
     

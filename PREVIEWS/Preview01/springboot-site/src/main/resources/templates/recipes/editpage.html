@@ -19,10 +19,6 @@
                     <label for="recipe_imgURL">Picture</label>
                     <input type="text" class="form-control" id="recipe_imgURL"
                            placeholder="http/https URL to image" th:field="*{imgURL}">
-                <!--<div class="form-group">-->
-                <!--<label for="exampleFormControlTextarea1">Example textarea</label>-->
-                <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
-                <!--</div>-->
                 <p style="visibility: hidden">text</p>
                 <h2 class="cr-secondary-header">Ingredient</h2>
                     <label for="ingredient">Name:</label>
@@ -31,7 +27,7 @@
                 <p style="visibility: hidden">text</p>
                 <h2 class="cr-secondary-header">Steps</h2>
                     <label for="steps">Step 1.)</label>
-                    <input type="text" class="form-control" id="steps" placeholder="step JSON string" th:field="*{steps}" th:text="*{steps}">
+                    <input type="text" class="form-control" id="steps" placeholder="step JSON string" th:field="*{steps}">
                     <p style="visibility: hidden">text</p>
                     <p style="visibility: hidden">text</p>
                 <button type="submit" class="btn btn-primary">Submit</button>
