@@ -1,0 +1,10 @@
+{
+  "id": 1,
+  "user": "test",
+  "title": "Keto Bagels",
+  "ingredients": [
+    { "name": "Mozarella Cheese", "notes": "skim, shredded", "amount": 2, "units": "cups"},
+  ],
+  "steps":["Mix incredients", "Put on pan"],
+  "img": "/imgs/pic1.png"
+}

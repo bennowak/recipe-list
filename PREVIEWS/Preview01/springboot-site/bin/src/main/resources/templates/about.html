@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:include="fragments/th_base :: head"></head>
+
+<body>
+<nav th:replace="fragments/th_header :: navbar"></nav>
+<header th:replace="fragments/th_header :: header"></header>
+<div class="container">
+    <div class="row">
+        <div class="cols12">
+            <h1>Learn about The Spoon</h1>
+        </div>
+    </div>
+</div>
+<footer th:replace="fragments/th_base :: footer"></footer>
+<div th:replace="fragments/th_base :: site_scripts"></div>
+</body>
+
+</html>

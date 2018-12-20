@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:include="fragments/th_base :: head"></head>
+
+<body>
+<nav th:replace="fragments/th_header :: navbar"></nav>
+<header th:replace="fragments/th_header :: header"></header>
+<section id="recipes" th:object="${allRecipes}">
+	
+        <a th:each="recipe:${allRecipes}" th:href="@{/recipes/detail/{id}(id=${recipe.id})}" class="food">
+		<!--<a th:href="/recipes/detail/{id}(id=${recipe.id})" class="food">-->
+			<div class="food__pic">
+				<img th:src="${recipe.imgURL}">
+			</div>
+			<div class="food__name" th:text="${recipe.title}"></div>
+		</a>
+</section>
+<footer th:replace="fragments/th_base :: footer"></footer>
+<div th:replace="fragments/th_base :: site_scripts"></div>
+<script src="/js/jsonTOrecipe.js"></script>
+</body>
+
+</html>

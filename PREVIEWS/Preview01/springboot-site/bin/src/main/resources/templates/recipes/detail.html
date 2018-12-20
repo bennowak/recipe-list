@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:include="fragments/th_base :: head"></head>
+
+<body>
+<nav th:replace="fragments/th_header :: navbar"></nav>
+<header th:replace="fragments/th_header :: header"></header>
+<section>
+            <div class="my-recipe" th:object="${recipe}">
+                <div id="ingredients" th:text="*{ingredients}" hidden></div>
+                <div id="steps" th:text="*{steps}" hidden></div>
+                <h2 class="my-recipe-title" th:text="*{title}"></h2>
+                <div class="my-recipe-img">
+                	<img th:src="*{imgURL}">
+                </div>
+                <div class="title-and-list tl1">
+	                <h2>Ingredients</h2>
+	                <ul class="my-recipe-list" id="showIngredients"></ul>
+                </div>
+                <div class="title-and-list tl2">
+	                <h2>Steps</h2>
+	                <ol class="my-recipe-list" id="showSteps"></ol>
+                </div>
+                <form class="recipe-detail-form" id="delete-recipe" action="#" th:action="@{/recipes/delete/{id}(id=*{id})}" method="post">
+                    <button type="submit" class="btn btn-outline-danger" id="delete">Delete</button>
+                </form>
+                <form class="recipe-detail-form" id="edit-recipe" action="#" th:action="@{/recipes/edit/{id}(id=*{id})}" method="post">
+                    <button type="submit" class="btn btn-outline-danger" id="edit">Edit</button>
+                </form>
+            </div>
+</section>
+<footer th:replace="fragments/th_base :: footer"></footer>
+<div th:replace="fragments/th_base :: site_scripts"></div>
+<script src="/js/recipeDetail.js"></script>
+</body>
+
+</html>
