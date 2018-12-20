@@ -6,7 +6,7 @@
 <body>
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
-<section id="siteUser" th:object="${siteUsers}">
+<section id="recipes" th:object="${siteUsers}">
 
     <a th:each="user:${siteUsers}" th:href="@{/users/detail/{id}(id=${user.id})}" class="food">
         <!--<a th:href="/recipes/detail/{id}(id=${recipe.id})" class="food">-->
