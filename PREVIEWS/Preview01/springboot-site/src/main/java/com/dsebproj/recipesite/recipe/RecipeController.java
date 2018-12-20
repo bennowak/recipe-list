@@ -6,7 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,4 +96,28 @@ public class RecipeController {
         }
         return mv;
     }
+    
+    @GetMapping("/recipe/edit/{id}")
+	public ModelAndView updatePostForm(@PathVariable("id") long id) {
+		ModelAndView mv = new ModelAndView("recipes/editpage");
+		Optional<Recipe> recipe = recipeRepo.findById(id);
+		mv.addObject("newRecipe", recipe);
+		mv.addObject("pageTitle", "Recipe - Edit");
+		return mv;
+	}
+    
+//    @PostMapping("/recipes/edit/{id}")
+//    public ModelAndView mv(@PathVariable("id") long id) {
+//        ModelAndView mv = new ModelAndView("recipes/update");
+//        mv.addObject("pageTitle", "Recipe Delete");
+//        if(recipeRepo.existsById(id)){
+//            recipeRepo.deleteById(id);
+//            mv.addObject("pageTitle", "Recipe Updated");
+//            mv.addObject("updateMessage", "The recipe has been updated");
+//        } else {
+//        	mv.addObject("pageTitle", "Update Error");
+//            mv.addObject("deleteMessage", "Unable to update recipe. Please contact admin.");
+//        }
+//        return mv;
+//    }
 }

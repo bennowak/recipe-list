@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:include="fragments/th_base :: head"></head>
+
+<body>
+<nav th:replace="fragments/th_header :: navbar"></nav>
+<header th:replace="fragments/th_header :: header"></header>
+<section id="message-deleted">
+
+    <div th:text="${deleteMessage}"></div>
+    <div><a href="/">Return to home page</a></div>
+    
+</section>
+<footer th:replace="fragments/th_base :: footer"></footer>
+<div th:replace="fragments/th_base :: site_scripts"></div>
+<script src="/js/recipeDetail.js"></script>
+</body>
+
+</html>

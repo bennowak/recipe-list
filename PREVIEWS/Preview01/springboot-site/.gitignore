@@ -2,3 +2,5 @@
 .idea/
 target/
 *.ai
+PREVIEWS/Preview01/springboot-site/target/
+PREVIEWS/Preview01/springboot-site/bin/
