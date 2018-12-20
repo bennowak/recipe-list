@@ -103,22 +103,26 @@ public class RecipeController {
 		Optional<Recipe> recipe = recipeRepo.findById(id);
 		mv.addObject("newRecipe", recipe);
 		mv.addObject("pageTitle", "Recipe - Edit");
-		System.out.println(recipe);
 		return mv;
 	}
     
-//    @PostMapping("/recipes/edit/{id}")
-//    public ModelAndView mv(@PathVariable("id") long id) {
-//        ModelAndView mv = new ModelAndView("recipes/update");
-//        mv.addObject("pageTitle", "Recipe Delete");
-//        if(recipeRepo.existsById(id)){
-//            recipeRepo.deleteById(id);
-//            mv.addObject("pageTitle", "Recipe Updated");
-//            mv.addObject("updateMessage", "The recipe has been updated");
-//        } else {
-//        	mv.addObject("pageTitle", "Update Error");
-//            mv.addObject("deleteMessage", "Unable to update recipe. Please contact admin.");
-//        }
-//        return mv;
-//    }
+    @PostMapping("/recipes/update/{id}")
+    public ModelAndView mv(@PathVariable("id") long id, Recipe recipeUpdate) {
+        System.out.println(recipeUpdate);
+        ModelAndView mv = new ModelAndView("recipes/update");
+        if(recipeRepo.existsById(id)){
+            Recipe updated = recipeRepo.findById(id).get();
+            updated.setIngredients(recipeUpdate.getIngredients());
+            updated.setImgURL(recipeUpdate.getImgURL());
+            updated.setSteps(recipeUpdate.getSteps());
+            updated.setTitle(recipeUpdate.getTitle());
+            recipeRepo.save(updated);
+            mv.addObject("pageTitle", "Recipe Updated");
+            mv.addObject("updateMessage", "The recipe has been updated");
+        } else {
+        	mv.addObject("pageTitle", "Update Error");
+            mv.addObject("updateMessage", "Unable to update recipe. Please contact admin.");
+        }
+        return mv;
+    }
 }

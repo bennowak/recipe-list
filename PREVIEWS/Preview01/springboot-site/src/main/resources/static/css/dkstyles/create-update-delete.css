@@ -1,9 +1,9 @@
-#message-deleted{
+.message-deleted{
 	padding-top: 5rem;
 	font-size: 2rem;
 }
 
-#message-deleted > *{
+.message-deleted > *{
 	text-align: center;
 }
 

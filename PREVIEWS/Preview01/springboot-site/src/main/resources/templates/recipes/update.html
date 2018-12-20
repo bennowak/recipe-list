@@ -4,14 +4,13 @@
 <head th:include="fragments/th_base :: head"></head>
 
 <body>
-<nav th:replace="fragments/th_navbar :: navbar"></nav>
-<div class="container-fluid">
-    <div class="row">
-        <div class="cols12">
-            <h1>Congratulations!!!</h1>
-        </div>
-    </div>
-</div>
+<nav th:replace="fragments/th_header :: navbar"></nav>
+<header th:replace="fragments/th_header :: header"></header>
+<section class="message-deleted">
+    <div th:text="${updateMessage}"></div>
+    <div><a href="/">Return to home page</a></div>
+</section>
+<footer th:replace="fragments/th_base :: footer"></footer>
 <div th:replace="fragments/th_base :: site_scripts"></div>
 </body>
 

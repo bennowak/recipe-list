@@ -7,9 +7,12 @@
 <nav th:replace="fragments/th_header :: navbar"></nav>
 <header th:replace="fragments/th_header :: header"></header>
 <section>
-	<form class="create-recipe" action="#" th:action="@{/recipes/new}" method="post" th:object="${newRecipe}">
+    <!--@{/recipes/edit/{id}(id=*{id})}-->
+
+    <!--@{/recipes/update/${newRecipe.id}}-->
+	<form class="create-recipe" action="#" th:action="@{/recipes/update/{id}(id=${id})}" method="post" th:object="${newRecipe}">
                     <label for="username">User</label>
-                    <input type="text" class="form-control" id="username" value="test" th:field="*{user}">
+                    <input type="text" class="form-control" id="username" th:field="*{user}">
                     <p style="visibility: hidden">text</p>
                 <h2 class="cr-main-header">New Recipe</h2>
                 <p style="visibility: hidden">text</p>
