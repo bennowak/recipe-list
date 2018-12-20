@@ -31,13 +31,20 @@
 	grid-column: 3 / -1;
 	grid-row: 1 / 3;
 	align-self: center;
+	width: 100%;
 }
 
 @media only screen and (max-width: 900px){
 	.my-recipe-img{
-		grid-column: 1 / -1;
+		grid-column: 2 / -2;
 		grid-row: 2 / 3;
 		justify-self: center;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.my-recipe-img{
+		grid-column: 1 / -1;
 	}
 }
 
@@ -58,6 +65,7 @@
 @media only screen and (max-width: 900px){
 	.title-and-list{
 		grid-row: 3 / 4;
+		padding: 1rem 0 0 1rem;
 	}
 }
 

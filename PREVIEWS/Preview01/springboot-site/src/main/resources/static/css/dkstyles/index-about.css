@@ -1,0 +1,17 @@
+#samsAwesomeDiv{
+	text-align: center;
+	font-family: fantasy;
+	font-size: 2rem;
+}
+
+#samsAwesomeDiv h2{
+	font-size: 4rem;
+	font-family: Copperplate, fantasy;
+	transform: scaleX(1.2);
+	margin-bottom: 4rem;
+}
+
+#samsAwesomeDiv div{
+	font-family: sans-serif;
+	line-height: 2;
+}
