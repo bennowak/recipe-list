@@ -37,7 +37,7 @@
 	justify-self: center;
 }
 
-.create-recipe, .create-recipe input, .create-recipe button{
+.create-recipe input, .create-recipe button{
 	font-size: 1.6rem;
 } 
 
@@ -48,15 +48,17 @@
 	outline: none;
 	border: none;
 	border-bottom: 3px solid #999;
-	transition: all 0.3s;
+	transition: all 0.5s;
 }
 .create-recipe input:focus{
-	background-color: rgba(235, 235, 235, 0.5);;
+	background-color: rgba(235, 255, 235, 0.5);
     border-color: rgba(235, 235, 235, 0.5);
-	border-bottom: 3px solid green;
+	border-bottom: 3px solid #00cc00;
+	box-shadow: none;
 }
 .create-recipe input:focus:invalid{
 	border-bottom: 3px solid red;
+	background-color: rgba(255, 235, 235, 0.5);
 }
 
 .create-recipe p{
