@@ -1,1 +1,1 @@
-# Spring Boot Application using MongoDB and MySQL
+# Spring Boot Application demonstrating Thymeleaf templating/fragments and basic CRUD functionality
