@@ -58,6 +58,7 @@ public class RecipeController {
         } else {
             mv.addObject("recipe", new Recipe(null, "Error, this recipe is not in the Database", null, null, null));
         }
+        System.out.println(found.get().toJSON());
         return mv;
     }
 
