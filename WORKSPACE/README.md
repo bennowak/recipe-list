@@ -1,1 +1,3 @@
-# Team Workspace\n## Guidelines\nPlease use your own folder to store 'working' files and other miscelaneous stuff.
+# Team Workspace
+## Guidelines
+Please use your own folder to store 'working' files and other miscelaneous stuff.
