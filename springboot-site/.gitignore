@@ -1,6 +1,7 @@
 .DS_Store
-.idea/
+.classpath
+.project
+.settings/
+**/.idea
 target/
-*.ai
-PREVIEWS/Preview01/springboot-site/target/
-PREVIEWS/Preview01/springboot-site/bin/
+
